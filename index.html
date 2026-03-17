@@ -3,311 +3,520 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraFusen | Emotion Meets Intelligence</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>AuraFusen | The AI That Feels What Interviews Can't Say</title>
+    <meta name="description" content="Every interview holds a story beneath the words. AuraFusen reads the emotions your team can't see — turning video, voice, and text into hiring intelligence that changes everything.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AuraFusen — The AI That Feels What Interviews Can't Say">
+    <meta property="og:description" content="Every great hire starts with understanding what was never said out loud. AuraFusen gives your team the emotional intelligence to see it.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.aurafusen.com">
+    <meta property="og:image" content="https://www.aurafusen.com/images/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AuraFusen — The AI That Feels What Interviews Can't Say">
+    <meta name="twitter:description" content="Every great hire starts with understanding what was never said out loud. AuraFusen gives your team the emotional intelligence to see it.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/logo-emblem.svg">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="noise-overlay"></div>
-    <div class="container">
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">AuraFusen</div>
-            <div class="nav-cta">
-                <button class="waitlist-btn">Join Waitlist</button>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <img src="images/logo-horizontal.png" alt="AuraFusen" class="logo-img">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#features">Features</a>
+                <a href="#product">Product</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pilot">Pilot Program</a>
             </div>
-        </nav>
+            <div class="nav-actions">
+                <button class="btn-demo" data-action="demo">Join the Pilot</button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6" class="menu-line-1"/>
+                    <line x1="3" y1="12" x2="21" y2="12" class="menu-line-2"/>
+                    <line x1="3" y1="18" x2="21" y2="18" class="menu-line-3"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
+    <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-content">
-                <h1 class="glitch-text">The Next Evolution of AI: <span>Emotion Meets Intelligence.</span></h1>
-                <p class="hero-subtext">AuraFusen is not a product. It's a breakthrough. A technology that sees beyond data—understanding emotions, behaviors, and human intent like never before.</p>
-                <button class="cta-btn">Be among the first to explore</button>
-            </div>
-            <div class="hero-visual">
-                <div class="pulse-circle"></div>
-                <div class="neural-network">
-                    <div class="node n1"></div>
-                    <div class="node n2"></div>
-                    <div class="node n3"></div>
-                    <div class="node n4"></div>
-                    <div class="node n5"></div>
-                    <div class="node n6"></div>
-                    <div class="connection c1"></div>
-                    <div class="connection c2"></div>
-                    <div class="connection c3"></div>
-                    <div class="connection c4"></div>
-                    <div class="connection c5"></div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span>Scroll to discover</span>
-                <div class="scroll-arrow"></div>
-            </div>
-        </section>
-
-        <!-- What is AuraFusen Section -->
-        <section class="what-is">
-            <h2>What is AuraFusen?</h2>
-            <div class="tech-description">
-                <p>AuraFusen fuses AI with human emotion.</p>
-                <p>It analyzes voice, video, and text to detect intent, sentiment, and micro-expressions in real time.</p>
-                <p>Think of it as the missing link between AI and true emotional intelligence.</p>
-            </div>
-            <div class="animation-container">
-                <div class="data-fusion-animation">
-                    <!-- Animation will be implemented with JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Technology Section -->
-        <section class="technology">
-            <h2>Core Technology</h2>
-            <p class="section-intro">AuraFusen is built on cutting-edge AI technologies that enable unprecedented emotional intelligence capabilities.</p>
-            
-            <div class="tech-features">
-                <div class="tech-feature-card">
-                    <div class="feature-icon blue-icon">
-                        <i class="icon-realtime"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Real-Time Analysis</h3>
-                        <p>Analyzes voice, video, and text to detect intent, sentiment, and micro-expressions in real time.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
+            <div class="hero-bg-glow"></div>
+            <div class="section-container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">Emotion Intelligence Platform</span>
+                    <h1>Every interview tells<br>a story. <span class="text-gradient">Most of it is invisible.</span></h1>
+                    <p class="hero-subtitle">Beneath every answer is confidence or doubt. Behind every pause is honesty or hesitation. AuraFusen sees what no interviewer ever could — and turns it into intelligence your team can act on.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" data-action="demo">
+                            Join the Pilot
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </button>
+                        <button class="btn btn-ghost" data-action="video" data-video="dxh0PuhbtKQ">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><polygon points="6,3 13,8 6,13"/></svg>
+                            Watch Video
+                        </button>
                     </div>
                 </div>
-                
-                <div class="tech-feature-card">
-                    <div class="feature-icon purple-icon">
-                        <i class="icon-brain"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Emotional Intelligence</h3>
-                        <p>The missing link between AI and true emotional understanding, enabling more human-like interactions.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
-                    </div>
-                </div>
-                
-                <div class="tech-feature-card">
-                    <div class="feature-icon pink-icon">
-                        <i class="icon-code"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Modular Architecture</h3>
-                        <p>Use voice, text, and video independently or fuse them together for comprehensive emotional insights.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
-                    </div>
-                </div>
-                
-                <div class="tech-feature-card">
-                    <div class="feature-icon gold-icon">
-                        <i class="icon-quantum"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Quantum-Inspired Processing</h3>
-                        <p>Leveraging quantum computing principles for unprecedented pattern recognition in emotional data.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
-                    </div>
-                </div>
-                
-                <div class="tech-feature-card">
-                    <div class="feature-icon teal-icon">
-                        <i class="icon-shield"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Enterprise-Grade Security</h3>
-                        <p>End-to-end encryption and privacy-preserving computation ensure your emotional data remains secure.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
-                    </div>
-                </div>
-                
-                <div class="tech-feature-card">
-                    <div class="feature-icon cyan-icon">
-                        <i class="icon-chip"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Edge Computing Optimization</h3>
-                        <p>Deploy emotional intelligence capabilities directly on edge devices for offline processing.</p>
-                        <button class="expand-btn"><i class="icon-chevron-down"></i></button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="tech-specs-container">
-                <h3 class="specs-title">Technical Specifications</h3>
-                
-                <div class="specs-columns">
-                    <div class="specs-column">
-                        <h4>Processing Capabilities</h4>
-                        <ul class="specs-list">
-                            <li><span class="spec-number">01</span> Processes 1,000+ emotional data points per second</li>
-                            <li><span class="spec-number">02</span> Sub-50ms latency for real-time applications</li>
-                            <li><span class="spec-number">03</span> Supports 40+ languages for text analysis</li>
-                            <li><span class="spec-number">04</span> 99.7% uptime with distributed processing architecture</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="specs-column">
-                        <h4>Integration Options</h4>
-                        <ul class="specs-list">
-                            <li><span class="spec-number">01</span> RESTful API with comprehensive documentation</li>
-                            <li><span class="spec-number">02</span> WebSocket support for real-time streaming</li>
-                            <li><span class="spec-number">03</span> SDKs for JavaScript, Python, Java, and Swift</li>
-                            <li><span class="spec-number">04</span> Serverless deployment options with edge computing support</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="performance-metrics">
-                    <h4>Performance Metrics</h4>
-                    <div class="metrics-grid">
-                        <div class="metric-card cyan-metric">
-                            <div class="metric-value">98.7%</div>
-                            <div class="metric-label">Emotion Detection Accuracy</div>
+                <div class="hero-visual">
+                    <div class="mockup-wrapper">
+                        <div class="mockup-chrome">
+                            <div class="chrome-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="chrome-title">AuraFusen Platform</span>
                         </div>
-                        <div class="metric-card pink-metric">
-                            <div class="metric-value">50ms</div>
-                            <div class="metric-label">Average Response Time</div>
-                        </div>
-                        <div class="metric-card gold-metric">
-                            <div class="metric-value">40+</div>
-                            <div class="metric-label">Supported Languages</div>
-                        </div>
-                        <div class="metric-card green-metric">
-                            <div class="metric-value">1.2M+</div>
-                            <div class="metric-label">Training Hours</div>
+                        <div class="mockup-screen">
+                            <div class="mock-ui">
+                                <div class="mock-sidebar">
+                                    <div class="mock-sidebar-item active"></div>
+                                    <div class="mock-sidebar-item"></div>
+                                    <div class="mock-sidebar-item"></div>
+                                    <div class="mock-sidebar-item"></div>
+                                </div>
+                                <div class="mock-main">
+                                    <div class="mock-video-area">
+                                        <div class="mock-play-btn">
+                                            <svg width="20" height="20" viewBox="0 0 16 16" fill="rgba(255,255,255,0.8)"><polygon points="6,3 13,8 6,13"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="mock-timeline">
+                                        <div class="mock-timeline-label">Emotion Timeline</div>
+                                        <div class="mock-bars">
+                                            <div class="mock-bar" style="--h: 55%; --color: var(--primary); --i: 0"></div>
+                                            <div class="mock-bar" style="--h: 80%; --color: var(--secondary); --i: 1"></div>
+                                            <div class="mock-bar" style="--h: 40%; --color: var(--accent); --i: 2"></div>
+                                            <div class="mock-bar" style="--h: 70%; --color: var(--primary); --i: 3"></div>
+                                            <div class="mock-bar" style="--h: 90%; --color: var(--secondary); --i: 4"></div>
+                                            <div class="mock-bar" style="--h: 50%; --color: var(--primary); --i: 5"></div>
+                                            <div class="mock-bar" style="--h: 75%; --color: var(--accent); --i: 6"></div>
+                                            <div class="mock-bar" style="--h: 35%; --color: var(--secondary); --i: 7"></div>
+                                            <div class="mock-bar" style="--h: 65%; --color: var(--primary); --i: 8"></div>
+                                            <div class="mock-bar" style="--h: 85%; --color: var(--secondary); --i: 9"></div>
+                                            <div class="mock-bar" style="--h: 45%; --color: var(--accent); --i: 10"></div>
+                                            <div class="mock-bar" style="--h: 60%; --color: var(--primary); --i: 11"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mock-panel">
+                                    <div class="mock-score">
+                                        <div class="mock-score-ring"></div>
+                                        <span class="mock-score-label">Score</span>
+                                    </div>
+                                    <div class="mock-metrics">
+                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 85%; --d: 0"></div></div>
+                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 70%; --d: 1"></div></div>
+                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 60%; --d: 2"></div></div>
+                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 90%; --d: 3"></div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Use Cases Section -->
-        <section id="use-cases" class="section">
-            <div class="container">
-                <h2 class="section-title">Use Cases</h2>
-                <p class="section-subtitle">AuraFusen enables a new generation of emotionally intelligent applications across multiple domains.</p>
-                
-                <div class="use-cases-container">
-                    <div class="use-cases-list">
-                        <div class="case-card active" data-case="hr">
-                            <div class="case-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="case-content">
-                                <h3>HR & Interview AI</h3>
-                                <p>Reads confidence, engagement, and honesty in candidate responses, providing deeper insights into potential hires.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="case-card" data-case="tutor">
-                            <div class="case-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="case-content">
-                                <h3>AI Tutors</h3>
-                                <p>Adapts in real time based on student emotions and engagement, creating personalized learning experiences.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="case-card" data-case="agent">
-                            <div class="case-icon">
-                                <i class="fas fa-headset"></i>
-                            </div>
-                            <div class="case-content">
-                                <h3>AI Virtual Agents</h3>
-                                <p>Understands sarcasm, frustration, and urgency for better support, revolutionizing customer interactions.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="case-card" data-case="health">
-                            <div class="case-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="case-content">
-                                <h3>AI Mental Health Companion</h3>
-                                <p>Analyzes tone and speech patterns to offer emotional support when you need it most.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="case-card" data-case="audience">
-                            <div class="case-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="case-content">
-                                <h3>Real-Time Audience AI</h3>
-                                <p>Detects audience sentiment shifts in live events, speeches, or videos, enabling dynamic content adaptation.</p>
-                            </div>
-                        </div>
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="section-container">
+                <div class="trust-metrics">
+                    <div class="trust-metric">
+                        <span class="trust-value">10+ Dimensions</span>
+                        <span class="trust-label">Confidence. Stress. Doubt. Engagement. Every emotion, measured.</span>
                     </div>
-                    
-                    <div id="case-detail" class="case-detail" data-case="hr">
-                        <div class="case-detail-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="case-detail-content">
-                            <h3>HR & Interview AI</h3>
-                            <p>Reads confidence, engagement, and honesty in candidate responses, providing deeper insights into potential hires.</p>
-                            <button class="btn-outline">Learn More <i class="fas fa-arrow-right"></i></button>
-                        </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-metric">
+                        <span class="trust-value">3 Senses</span>
+                        <span class="trust-label">Face. Voice. Words. Fused into a single emotional portrait.</span>
                     </div>
-                </div>
-                
-                <div class="text-center mt-5">
-                    <a href="#contact" class="btn btn-primary">Explore All Use Cases</a>
+                    <div class="trust-divider"></div>
+                    <div class="trust-metric">
+                        <span class="trust-value">Instant</span>
+                        <span class="trust-label">From raw interview to complete intelligence report. Automatically.</span>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Use Cases Section End -->
 
-        <!-- How It Works Section -->
-        <section class="how-it-works">
-            <h2>How It Works</h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <h3>AuraFusen SDKs & APIs</h3>
-                    <p>Developers can integrate emotional intelligence into any system.</p>
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="section-container">
+                <span class="eyebrow">Capabilities</span>
+                <h2>What if you could feel<br>what your candidates feel?</h2>
+                <p class="section-intro">Not guess. Not assume. Actually understand the emotional truth of every interview — and use it to hire better humans.</p>
+
+                <!-- Hero features: the two differentiators -->
+                <div class="features-hero-grid">
+                    <div class="feature-card feature-hero">
+                        <div class="feature-hero-visual">
+                            <div class="feature-visual-timeline">
+                                <div class="fv-bar" style="--h: 50%; --d: 0"></div>
+                                <div class="fv-bar" style="--h: 75%; --d: 1"></div>
+                                <div class="fv-bar" style="--h: 40%; --d: 2"></div>
+                                <div class="fv-bar" style="--h: 85%; --d: 3"></div>
+                                <div class="fv-bar" style="--h: 60%; --d: 4"></div>
+                                <div class="fv-bar" style="--h: 90%; --d: 5"></div>
+                                <div class="fv-bar" style="--h: 55%; --d: 6"></div>
+                                <div class="fv-bar" style="--h: 70%; --d: 7"></div>
+                            </div>
+                        </div>
+                        <div class="feature-hero-content">
+                            <div class="feature-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </div>
+                            <h3>Emotion Timeline</h3>
+                            <p>Watch confidence rise when they talk about their craft. See stress spike when the hard question lands. Every emotion, every second, mapped to the conversation — so you understand not just what was said, but how it was felt.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card feature-hero">
+                        <div class="feature-hero-visual">
+                            <div class="feature-visual-report">
+                                <div class="fv-report-line wide"></div>
+                                <div class="fv-report-line"></div>
+                                <div class="fv-report-line wide"></div>
+                                <div class="fv-report-divider"></div>
+                                <div class="fv-report-line short"></div>
+                                <div class="fv-report-line"></div>
+                                <div class="fv-report-line wide"></div>
+                                <div class="fv-report-line short"></div>
+                            </div>
+                        </div>
+                        <div class="feature-hero-content">
+                            <div class="feature-icon-wrap purple">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                            </div>
+                            <h3>AI Interview Reports</h3>
+                            <p>No more scribbled notes and forgotten impressions. AuraFusen generates a complete intelligence report — strengths backed by evidence, concerns tied to moments, and a hiring recommendation your entire team can trust.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="tech-item">
-                    <h3>Modular AI Architecture</h3>
-                    <p>Use voice, text, and video independently or fuse them.</p>
-                </div>
-                <div class="tech-item">
-                    <h3>Real-Time Emotional Insights</h3>
-                    <p>AI that processes emotions in milliseconds.</p>
+
+                <!-- Supporting features -->
+                <div class="features-support-grid">
+                    <div class="feature-card feature-support">
+                        <div class="feature-icon-wrap pink">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <h3>Candidate Comparison</h3>
+                        <p>Stop debating gut feelings in hiring meetings. Compare candidates side-by-side on the dimensions that actually predict success.</p>
+                    </div>
+
+                    <div class="feature-card feature-support">
+                        <div class="feature-icon-wrap teal">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3>Bias Detection</h3>
+                        <p>The best intentions still carry unconscious patterns. AuraFusen surfaces them — so your hiring process is as fair as your values.</p>
+                    </div>
+
+                    <div class="feature-card feature-support">
+                        <div class="feature-icon-wrap gold">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        </div>
+                        <h3>Smart Transcription</h3>
+                        <p>Every word, every speaker, every pause — captured and searchable. Find the exact moment a candidate revealed something extraordinary.</p>
+                    </div>
+
+                    <div class="feature-card feature-support">
+                        <div class="feature-icon-wrap cyan">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>Emotional data is deeply personal. We treat it that way. End-to-end encryption, role-based access, and complete data isolation.</p>
+                    </div>
                 </div>
             </div>
-            <button class="cta-btn secondary">Request early access</button>
         </section>
 
-        <!-- Sign-Off Section -->
-        <section class="sign-off">
-            <h2 class="tagline">AI has evolved. Have you?</h2>
-            <p>AuraFusen is still in development. Get notified when the future is ready.</p>
-            <button class="cta-btn">Join the waitlist</button>
+        <!-- Product Showcase -->
+        <section id="product" class="product-showcase">
+            <div class="section-container">
+                <span class="eyebrow">Platform</span>
+                <h2>This is what clarity looks like</h2>
+                <p class="section-intro">No more guessing. No more "I had a good feeling about them." Just intelligence — clear, visual, and undeniable.</p>
+
+                <div class="showcase-tabs" role="tablist" aria-label="Product screenshots">
+                    <button class="showcase-tab active" role="tab" aria-selected="true" data-tab="0">Video Analysis</button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="1">Emotional Intelligence</button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="2">Performance Analysis</button>
+                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="3">Hiring Dashboard</button>
+                </div>
+
+                <div class="showcase-viewer">
+                    <div class="showcase-chrome">
+                        <div class="chrome-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="showcase-screen">
+                        <div class="showcase-slide active" data-slide="0">
+                            <img src="images/screenshot-emotion-timeline.png" alt="AuraFusen Video Analysis — real-time emotion detection with confidence scores, live emotion bars, and key insights panel" loading="lazy">
+                        </div>
+                        <div class="showcase-slide" data-slide="1">
+                            <img src="images/screenshot-ai-report.png" alt="AuraFusen Emotional Intelligence — emotion breakdown, EI competency scores, and emotional journey timeline" loading="lazy">
+                        </div>
+                        <div class="showcase-slide" data-slide="2">
+                            <img src="images/screenshot-comparison.png" alt="AuraFusen Performance Analysis — skill assessment, performance comparison, and EI competency cards" loading="lazy">
+                        </div>
+                        <div class="showcase-slide" data-slide="3">
+                            <img src="images/screenshot-dashboard.png" alt="AuraFusen Hiring Dashboard — pipeline overview, recent activity, top candidates, and position funnels" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-descriptions">
+                    <p class="showcase-desc active" data-desc="0">Watch the interview with AI eyes. Real-time emotion detection, confidence scoring, and live emotional signals — mapped to every second of the conversation.</p>
+                    <p class="showcase-desc" data-desc="1">Dominant emotions, EI competency scores, and the full emotional journey across every question. The story beneath the words, visualized.</p>
+                    <p class="showcase-desc" data-desc="2">Technical skills, communication, problem solving, cultural fit — scored and broken down into the competencies that actually predict success.</p>
+                    <p class="showcase-desc" data-desc="3">Your entire hiring pipeline at a glance — candidates, interviews analyzed, scores averaged, and positions tracked from application to hire.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <div class="logo">AuraFusen</div>
-            <div class="copyright">&copy; 2025 AuraFusen Technology</div>
-        </footer>
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="section-container">
+                <span class="eyebrow">Process</span>
+                <h2>Beautifully simple</h2>
+                <p class="section-intro">Upload an interview. Let the AI do what humans can't. Get intelligence that changes how you hire.</p>
+
+                <div class="steps-strip">
+                    <div class="step">
+                        <span class="step-number">01</span>
+                        <h3>Upload the Interview</h3>
+                        <p>Drop in any recorded interview. That's it. The moment it lands, our AI goes to work.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">02</span>
+                        <h3>AI Reads Between the Lines</h3>
+                        <p>Face, voice, and words — analyzed simultaneously. Confidence, doubt, stress, engagement — nothing hides from the signal.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">03</span>
+                        <h3>Decide with Clarity</h3>
+                        <p>A complete intelligence report. Strengths backed by moments. Concerns tied to evidence. A recommendation you can stand behind.</p>
+                    </div>
+                    <div class="steps-connector" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Case -->
+        <section id="use-case" class="use-case">
+            <div class="section-container">
+                <div class="use-case-layout">
+                    <div class="use-case-content">
+                        <span class="eyebrow">Built for HR</span>
+                        <h2>We started with hiring.<br>Because hiring is broken.</h2>
+                        <p class="use-case-body">Every year, companies lose billions on bad hires made from gut feelings and forgotten impressions. We built AuraFusen to fix that — starting with the moment that matters most: the interview.</p>
+                        <div class="use-case-pills">
+                            <span class="pill">Emotion Scoring</span>
+                            <span class="pill">Bias Alerts</span>
+                            <span class="pill">Smart Q&A</span>
+                            <span class="pill">PDF Export</span>
+                            <span class="pill">Team Analytics</span>
+                        </div>
+                        <p class="use-case-roadmap">Next horizons: Education and Customer Experience — because emotional intelligence belongs everywhere.</p>
+                    </div>
+                    <div class="use-case-visual">
+                        <div class="use-case-mockup">
+                            <div class="ucm-card">
+                                <div class="ucm-avatar"></div>
+                                <div class="ucm-info">
+                                    <div class="ucm-name"></div>
+                                    <div class="ucm-role"></div>
+                                </div>
+                                <div class="ucm-score">
+                                    <svg width="36" height="36" viewBox="0 0 36 36">
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="75 25" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                                        <defs><linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="var(--primary)"/><stop offset="100%" stop-color="var(--secondary)"/></linearGradient></defs>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ucm-card">
+                                <div class="ucm-avatar"></div>
+                                <div class="ucm-info">
+                                    <div class="ucm-name"></div>
+                                    <div class="ucm-role"></div>
+                                </div>
+                                <div class="ucm-score">
+                                    <svg width="36" height="36" viewBox="0 0 36 36">
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="60 40" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ucm-card">
+                                <div class="ucm-avatar"></div>
+                                <div class="ucm-info">
+                                    <div class="ucm-name"></div>
+                                    <div class="ucm-role"></div>
+                                </div>
+                                <div class="ucm-score">
+                                    <svg width="36" height="36" viewBox="0 0 36 36">
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
+                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="85 15" stroke-linecap="round" transform="rotate(-90 18 18)"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pilot Program -->
+        <section id="pilot" class="pilot-program">
+            <div class="section-container">
+                <span class="eyebrow">Early Access</span>
+                <h2>Before we open the doors,<br>we're <span class="text-gradient">choosing who walks in first.</span></h2>
+                <p class="section-intro">AuraFusen is live — and we're handpicking the first teams who'll shape what emotional intelligence in hiring becomes.</p>
+
+                <div class="pilot-grid">
+                    <div class="pilot-card">
+                        <div class="pilot-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3>Early access to every feature</h3>
+                        <p>Full platform. No feature gates. You'll have everything we've built — emotion timelines, AI reports, candidate comparison, bias detection — from day one.</p>
+                    </div>
+                    <div class="pilot-card">
+                        <div class="pilot-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                        </div>
+                        <h3>Direct line to the founding team</h3>
+                        <p>This isn't a support ticket. You'll work directly with our engineers and designers. Your feedback won't be "noted" — it'll be built.</p>
+                    </div>
+                    <div class="pilot-card">
+                        <div class="pilot-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <h3>Shape the future of hiring</h3>
+                        <p>Pilot partners don't just use AuraFusen — they define it. The features you need become the features everyone gets. Your fingerprint will be on this product forever.</p>
+                    </div>
+                </div>
+
+                <div class="pilot-cta-wrap">
+                    <button class="btn btn-primary btn-lg" data-action="demo">
+                        Apply for the Pilot
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+                    <p class="pilot-note">Limited spots. No commitment. Just a conversation about whether we're the right fit for each other.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="final-cta-bg"></div>
+            <div class="section-container">
+                <h2>The best candidate is already<br>in your pipeline. <span class="text-gradient">Can you see them?</span></h2>
+                <p>We're selecting a small group of pilot partners to experience AuraFusen before anyone else. If you believe hiring deserves better — we should talk.</p>
+                <button class="btn btn-primary btn-lg" data-action="demo">
+                    Apply for the Pilot
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="images/logo-horizontal.png" alt="AuraFusen" class="logo-img">
+                    </a>
+                    <p class="footer-tagline">The AI that feels what interviews can't say.</p>
+                    <p class="footer-location">Melbourne, Australia</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#product">Product</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#pilot">Pilot Program</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="mailto:hello@aurafusen.com">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <a href="mailto:hello@aurafusen.com">hello@aurafusen.com</a>
+                        <a href="https://www.linkedin.com/company/aurafusen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AuraFusen by Neomeric Pty Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Brand video">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content video-modal-content">
+            <button class="modal-close" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+            </button>
+            <div class="video-container">
+                <iframe id="video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="AuraFusen brand video"></iframe>
+            </div>
+        </div>
     </div>
 
-    <!-- Modal for waitlist signup -->
-    <div class="modal" id="waitlist-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Join the AuraFusen Waitlist</h2>
-            <p>Be among the first to experience the future of emotional AI.</p>
-            <form id="waitlist-form">
-                <input type="email" placeholder="Your email" required>
-                <button type="submit" class="cta-btn">Join Waitlist</button>
+    <!-- Demo Request Modal -->
+    <div class="modal" id="demo-modal" role="dialog" aria-modal="true" aria-label="Request a demo">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content demo-modal-content">
+            <button class="modal-close" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg>
+            </button>
+            <h2>Join the pilot</h2>
+            <p>We're handpicking a small group of teams to shape the future of hiring intelligence. 15 minutes — let's see if we're the right fit.</p>
+            <form id="demo-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-field">
+                    <label for="demo-name">Full name</label>
+                    <input type="text" id="demo-name" name="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="form-field">
+                    <label for="demo-email">Work email</label>
+                    <input type="email" id="demo-email" name="email" placeholder="jane@company.com" required>
+                </div>
+                <div class="form-field">
+                    <label for="demo-company">Company name</label>
+                    <input type="text" id="demo-company" name="company" placeholder="Acme Corp" required>
+                </div>
+                <div class="form-field">
+                    <label for="demo-size">Team size <span class="optional">(optional)</span></label>
+                    <input type="text" id="demo-size" name="team_size" placeholder="e.g. 10-50">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Apply for the Pilot</button>
             </form>
         </div>
     </div>
