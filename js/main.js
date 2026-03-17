@@ -141,7 +141,10 @@ function initVideoModal() {
     });
 }
 
-/* ---- Demo Form (Formspree) ---- */
+/* ---- Demo Form (Brevo via Cloudflare Worker) ---- */
+// TODO: Replace with your Cloudflare Worker URL after deployment
+const WORKER_URL = 'https://aurafusen-form.YOUR-SUBDOMAIN.workers.dev';
+
 function initDemoForm() {
     const form = document.getElementById('demo-form');
     if (!form) return;
@@ -154,40 +157,47 @@ function initDemoForm() {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        const formData = new FormData(form);
+        // Clear any previous errors
+        const existingError = form.querySelector('.form-error');
+        if (existingError) existingError.remove();
+
+        const payload = {
+            name: form.querySelector('#demo-name').value.trim(),
+            email: form.querySelector('#demo-email').value.trim(),
+            company: form.querySelector('#demo-company').value.trim(),
+            team_size: form.querySelector('#demo-size').value.trim(),
+        };
 
         try {
-            const response = await fetch(form.action, {
+            const response = await fetch(WORKER_URL, {
                 method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
             });
 
-            if (response.ok) {
+            const data = await response.json();
+
+            if (data.success) {
                 form.innerHTML = `
                     <div class="success-message">
                         <p>Thank you! We'll be in touch within 24 hours.</p>
                     </div>
                 `;
 
-                // Auto-close after 3 seconds
                 setTimeout(() => {
                     closeModal('demo-modal');
                 }, 3000);
             } else {
-                throw new Error('Form submission failed');
+                throw new Error(data.message || 'Form submission failed');
             }
-        } catch {
+        } catch (err) {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
 
-            let errorEl = form.querySelector('.form-error');
-            if (!errorEl) {
-                errorEl = document.createElement('p');
-                errorEl.className = 'form-error';
-                form.appendChild(errorEl);
-            }
+            const errorEl = document.createElement('p');
+            errorEl.className = 'form-error';
             errorEl.textContent = 'Something went wrong. Please try again or email us at hello@aurafusen.com';
+            form.appendChild(errorEl);
         }
     });
 }
