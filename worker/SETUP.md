@@ -54,7 +54,7 @@ Your subdomain is shown in the Cloudflare dashboard under **Workers & Pages** �
 ### 8. Verify Sender Email
 For the notification email to work:
 1. Go to **Senders, Domains & Dedicated IPs** → **Senders**
-2. Add `hello@aurafusen.com` as a sender
+2. Add `sales@neomeric.com` as a sender
 3. Verify it via the confirmation email
 
 ## Testing
@@ -62,7 +62,7 @@ For the notification email to work:
 2. Click "Join the Pilot"
 3. Fill in the form and submit
 4. Check your Brevo **Contacts** list — the new contact should appear
-5. Check `hello@aurafusen.com` for the notification email
+5. Check `sales@neomeric.com` for the notification email
 
 ## Free Tier Limits
 - **Cloudflare Workers**: 100,000 requests/day (more than enough)

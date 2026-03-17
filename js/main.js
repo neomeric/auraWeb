@@ -143,7 +143,7 @@ function initVideoModal() {
 
 /* ---- Demo Form (Brevo via Cloudflare Worker) ---- */
 // TODO: Replace with your Cloudflare Worker URL after deployment
-const WORKER_URL = 'https://aurafusen-form.YOUR-SUBDOMAIN.workers.dev';
+const WORKER_URL = 'https://aurafusen-form.engr-mhaseeb.workers.dev';
 
 function initDemoForm() {
     const form = document.getElementById('demo-form');
@@ -196,7 +196,7 @@ function initDemoForm() {
 
             const errorEl = document.createElement('p');
             errorEl.className = 'form-error';
-            errorEl.textContent = 'Something went wrong. Please try again or email us at hello@aurafusen.com';
+            errorEl.textContent = 'Something went wrong. Please try again or email us at sales@neomeric.com';
             form.appendChild(errorEl);
         }
     });

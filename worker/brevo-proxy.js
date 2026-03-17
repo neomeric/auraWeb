@@ -101,8 +101,8 @@ async function sendNotificationEmail(env, { name, email, company, team_size }) {
                 'api-key': env.BREVO_API_KEY,
             },
             body: JSON.stringify({
-                sender: { name: 'AuraFusen Website', email: 'hello@aurafusen.com' },
-                to: [{ email: 'hello@aurafusen.com', name: 'AuraFusen Team' }],
+                sender: { name: 'AuraFusen Website', email: 'sales@neomeric.com' },
+                to: [{ email: 'sales@neomeric.com', name: 'AuraFusen Team' }],
                 subject: `New Pilot Application: ${company}`,
                 htmlContent: `
                     <h2>New Pilot Application</h2>
