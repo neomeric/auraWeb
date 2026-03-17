@@ -44,6 +44,11 @@ export default {
                 return jsonResponse({ success: false, message: 'Invalid email address.' }, 400);
             }
 
+            // Check API key is set
+            if (!env.BREVO_API_KEY) {
+                return jsonResponse({ success: false, message: 'BREVO_API_KEY not configured.' }, 500);
+            }
+
             // Create contact in Brevo
             const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
                 method: 'POST',
@@ -65,8 +70,7 @@ export default {
                 }),
             });
 
-            const brevoData = await brevoResponse.json();
-
+            // 201 = created, 204 = updated (no body)
             if (brevoResponse.ok || brevoResponse.status === 204) {
                 // Also send a notification email via Brevo transactional
                 await sendNotificationEmail(env, { name, email, company, team_size });
@@ -74,12 +78,17 @@ export default {
                 return jsonResponse({ success: true, message: 'Application received.' });
             }
 
+            // Parse error response
+            const brevoText = await brevoResponse.text();
+            let brevoData;
+            try { brevoData = JSON.parse(brevoText); } catch { brevoData = {}; }
+
             // Contact already exists is still a success for us
             if (brevoData.code === 'duplicate_parameter') {
                 return jsonResponse({ success: true, message: 'Application received.' });
             }
 
-            console.error('Brevo API error:', JSON.stringify(brevoData));
+            console.error('Brevo API error:', brevoResponse.status, brevoText);
             return jsonResponse({ success: false, message: 'Submission failed. Please try again.' }, 500);
         } catch (err) {
             console.error('Worker error:', err.message);
