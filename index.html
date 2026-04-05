@@ -37,13 +37,13 @@
     <nav aria-label="Main navigation">
         <div class="nav-inner">
             <a href="#" class="logo">
-                <img src="images/logo-horizontal.png" alt="AuraFusen" class="logo-img">
+                <span class="logo-aura">Aura</span>Fusen
             </a>
             <div class="nav-links" id="nav-links">
-                <a href="#features">Features</a>
-                <a href="#product">Product</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#pilot">Pilot Program</a>
+                <a href="/" class="active">Home</a>
+                <a href="/product.html">Product</a>
+                <a href="/why.html">Why</a>
+                <a href="/pilot.html">Pilot</a>
             </div>
             <div class="nav-actions">
                 <button class="btn-demo" data-action="demo">Join the Pilot</button>
@@ -87,47 +87,72 @@
                             <span class="chrome-title">AuraFusen Platform</span>
                         </div>
                         <div class="mockup-screen">
-                            <div class="mock-ui">
-                                <div class="mock-sidebar">
-                                    <div class="mock-sidebar-item active"></div>
-                                    <div class="mock-sidebar-item"></div>
-                                    <div class="mock-sidebar-item"></div>
-                                    <div class="mock-sidebar-item"></div>
+                            <div class="live-reader">
+                                <!-- Status bar: REC indicator + timestamp -->
+                                <div class="live-status">
+                                    <div class="live-rec">
+                                        <span class="live-rec-dot"></span>
+                                        <span class="live-rec-label">ANALYZING · LIVE</span>
+                                    </div>
+                                    <div class="live-timestamp">0:<span id="live-time">34</span></div>
                                 </div>
-                                <div class="mock-main">
-                                    <div class="mock-video-area">
-                                        <div class="mock-play-btn">
-                                            <svg width="20" height="20" viewBox="0 0 16 16" fill="rgba(255,255,255,0.8)"><polygon points="6,3 13,8 6,13"/></svg>
-                                        </div>
-                                    </div>
-                                    <div class="mock-timeline">
-                                        <div class="mock-timeline-label">Emotion Timeline</div>
-                                        <div class="mock-bars">
-                                            <div class="mock-bar" style="--h: 55%; --color: var(--primary); --i: 0"></div>
-                                            <div class="mock-bar" style="--h: 80%; --color: var(--secondary); --i: 1"></div>
-                                            <div class="mock-bar" style="--h: 40%; --color: var(--accent); --i: 2"></div>
-                                            <div class="mock-bar" style="--h: 70%; --color: var(--primary); --i: 3"></div>
-                                            <div class="mock-bar" style="--h: 90%; --color: var(--secondary); --i: 4"></div>
-                                            <div class="mock-bar" style="--h: 50%; --color: var(--primary); --i: 5"></div>
-                                            <div class="mock-bar" style="--h: 75%; --color: var(--accent); --i: 6"></div>
-                                            <div class="mock-bar" style="--h: 35%; --color: var(--secondary); --i: 7"></div>
-                                            <div class="mock-bar" style="--h: 65%; --color: var(--primary); --i: 8"></div>
-                                            <div class="mock-bar" style="--h: 85%; --color: var(--secondary); --i: 9"></div>
-                                            <div class="mock-bar" style="--h: 45%; --color: var(--accent); --i: 10"></div>
-                                            <div class="mock-bar" style="--h: 60%; --color: var(--primary); --i: 11"></div>
-                                        </div>
-                                    </div>
+
+                                <!-- Candidate visualization with scan effect -->
+                                <div class="live-subject">
+                                    <div class="subject-core"></div>
+                                    <div class="subject-ring subject-ring-1"></div>
+                                    <div class="subject-ring subject-ring-2"></div>
+                                    <div class="subject-ring subject-ring-3"></div>
+                                    <div class="subject-scan"></div>
                                 </div>
-                                <div class="mock-panel">
-                                    <div class="mock-score">
-                                        <div class="mock-score-ring"></div>
-                                        <span class="mock-score-label">Score</span>
+
+                                <!-- Voice waveform -->
+                                <div class="live-waveform">
+                                    <span style="--wh: 30%; --wd: 0"></span>
+                                    <span style="--wh: 55%; --wd: 1"></span>
+                                    <span style="--wh: 80%; --wd: 2"></span>
+                                    <span style="--wh: 45%; --wd: 3"></span>
+                                    <span style="--wh: 70%; --wd: 4"></span>
+                                    <span style="--wh: 90%; --wd: 5"></span>
+                                    <span style="--wh: 60%; --wd: 6"></span>
+                                    <span style="--wh: 35%; --wd: 7"></span>
+                                    <span style="--wh: 75%; --wd: 8"></span>
+                                    <span style="--wh: 85%; --wd: 9"></span>
+                                    <span style="--wh: 50%; --wd: 10"></span>
+                                    <span style="--wh: 40%; --wd: 11"></span>
+                                    <span style="--wh: 65%; --wd: 12"></span>
+                                    <span style="--wh: 95%; --wd: 13"></span>
+                                    <span style="--wh: 55%; --wd: 14"></span>
+                                    <span style="--wh: 70%; --wd: 15"></span>
+                                    <span style="--wh: 45%; --wd: 16"></span>
+                                    <span style="--wh: 80%; --wd: 17"></span>
+                                    <span style="--wh: 60%; --wd: 18"></span>
+                                    <span style="--wh: 35%; --wd: 19"></span>
+                                    <span style="--wh: 75%; --wd: 20"></span>
+                                    <span style="--wh: 50%; --wd: 21"></span>
+                                    <span style="--wh: 85%; --wd: 22"></span>
+                                    <span style="--wh: 40%; --wd: 23"></span>
+                                </div>
+
+                                <!-- Live emotion readings appearing sequentially -->
+                                <div class="live-readings">
+                                    <div class="reading reading-1">
+                                        <span class="reading-time">0:12</span>
+                                        <span class="reading-dot" style="background: var(--secondary)"></span>
+                                        <span class="reading-label">Confidence</span>
+                                        <span class="reading-value up">87%</span>
                                     </div>
-                                    <div class="mock-metrics">
-                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 85%; --d: 0"></div></div>
-                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 70%; --d: 1"></div></div>
-                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 60%; --d: 2"></div></div>
-                                        <div class="mock-metric"><span></span><div class="mock-metric-bar" style="--w: 90%; --d: 3"></div></div>
+                                    <div class="reading reading-2">
+                                        <span class="reading-time">0:34</span>
+                                        <span class="reading-dot" style="background: var(--accent)"></span>
+                                        <span class="reading-label">Stress spike</span>
+                                        <span class="reading-alert">⚠</span>
+                                    </div>
+                                    <div class="reading reading-3">
+                                        <span class="reading-time">0:58</span>
+                                        <span class="reading-dot" style="background: var(--primary)"></span>
+                                        <span class="reading-label">Engagement</span>
+                                        <span class="reading-value">High</span>
                                     </div>
                                 </div>
                             </div>
@@ -142,17 +167,29 @@
             <div class="section-container">
                 <div class="trust-metrics">
                     <div class="trust-metric">
-                        <span class="trust-value">10+ Dimensions</span>
+                        <div class="trust-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <span class="trust-number">10<span class="trust-plus">+</span></span>
+                        <span class="trust-unit">Emotion Dimensions</span>
                         <span class="trust-label">Confidence. Stress. Doubt. Engagement. Every emotion, measured.</span>
                     </div>
                     <div class="trust-divider"></div>
                     <div class="trust-metric">
-                        <span class="trust-value">3 Senses</span>
+                        <div class="trust-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6M4.22 4.22l4.24 4.24m7.08 7.08l4.24 4.24M1 12h6m10 0h6M4.22 19.78l4.24-4.24m7.08-7.08l4.24-4.24"/></svg>
+                        </div>
+                        <span class="trust-number">3</span>
+                        <span class="trust-unit">Fused Signals</span>
                         <span class="trust-label">Face. Voice. Words. Fused into a single emotional portrait.</span>
                     </div>
                     <div class="trust-divider"></div>
                     <div class="trust-metric">
-                        <span class="trust-value">Instant</span>
+                        <div class="trust-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <span class="trust-number">&lt;60s</span>
+                        <span class="trust-unit">Full Analysis</span>
                         <span class="trust-label">From raw interview to complete intelligence report. Automatically.</span>
                     </div>
                 </div>
@@ -213,177 +250,13 @@
                     </div>
                 </div>
 
-                <!-- Supporting features -->
-                <div class="features-support-grid">
-                    <div class="feature-card feature-support">
-                        <div class="feature-icon-wrap pink">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                        </div>
-                        <h3>Candidate Comparison</h3>
-                        <p>Stop debating gut feelings in hiring meetings. Compare candidates side-by-side on the dimensions that actually predict success.</p>
-                    </div>
-
-                    <div class="feature-card feature-support">
-                        <div class="feature-icon-wrap teal">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-                        </div>
-                        <h3>Bias Detection</h3>
-                        <p>The best intentions still carry unconscious patterns. AuraFusen surfaces them — so your hiring process is as fair as your values.</p>
-                    </div>
-
-                    <div class="feature-card feature-support">
-                        <div class="feature-icon-wrap gold">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                        </div>
-                        <h3>Smart Transcription</h3>
-                        <p>Every word, every speaker, every pause — captured and searchable. Find the exact moment a candidate revealed something extraordinary.</p>
-                    </div>
-
-                    <div class="feature-card feature-support">
-                        <div class="feature-icon-wrap cyan">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-                        </div>
-                        <h3>Enterprise Security</h3>
-                        <p>Emotional data is deeply personal. We treat it that way. End-to-end encryption, role-based access, and complete data isolation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Product Showcase -->
-        <section id="product" class="product-showcase">
-            <div class="section-container">
-                <span class="eyebrow">Platform</span>
-                <h2>This is what clarity looks like</h2>
-                <p class="section-intro">No more guessing. No more "I had a good feeling about them." Just intelligence — clear, visual, and undeniable.</p>
-
-                <div class="showcase-tabs" role="tablist" aria-label="Product screenshots">
-                    <button class="showcase-tab active" role="tab" aria-selected="true" data-tab="0">Video Analysis</button>
-                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="1">Emotional Intelligence</button>
-                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="2">Performance Analysis</button>
-                    <button class="showcase-tab" role="tab" aria-selected="false" data-tab="3">Hiring Dashboard</button>
-                </div>
-
-                <div class="showcase-viewer">
-                    <div class="showcase-chrome">
-                        <div class="chrome-dots">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </div>
-                    <div class="showcase-screen">
-                        <div class="showcase-slide active" data-slide="0">
-                            <img src="images/screenshot-emotion-timeline.png" alt="AuraFusen Video Analysis — real-time emotion detection with confidence scores, live emotion bars, and key insights panel" loading="lazy">
-                        </div>
-                        <div class="showcase-slide" data-slide="1">
-                            <img src="images/screenshot-ai-report.png" alt="AuraFusen Emotional Intelligence — emotion breakdown, EI competency scores, and emotional journey timeline" loading="lazy">
-                        </div>
-                        <div class="showcase-slide" data-slide="2">
-                            <img src="images/screenshot-comparison.png" alt="AuraFusen Performance Analysis — skill assessment, performance comparison, and EI competency cards" loading="lazy">
-                        </div>
-                        <div class="showcase-slide" data-slide="3">
-                            <img src="images/screenshot-dashboard.png" alt="AuraFusen Hiring Dashboard — pipeline overview, recent activity, top candidates, and position funnels" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="showcase-descriptions">
-                    <p class="showcase-desc active" data-desc="0">Watch the interview with AI eyes. Real-time emotion detection, confidence scoring, and live emotional signals — mapped to every second of the conversation.</p>
-                    <p class="showcase-desc" data-desc="1">Dominant emotions, EI competency scores, and the full emotional journey across every question. The story beneath the words, visualized.</p>
-                    <p class="showcase-desc" data-desc="2">Technical skills, communication, problem solving, cultural fit — scored and broken down into the competencies that actually predict success.</p>
-                    <p class="showcase-desc" data-desc="3">Your entire hiring pipeline at a glance — candidates, interviews analyzed, scores averaged, and positions tracked from application to hire.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works -->
-        <section id="how-it-works" class="how-it-works">
-            <div class="section-container">
-                <span class="eyebrow">Process</span>
-                <h2>Beautifully simple</h2>
-                <p class="section-intro">Upload an interview. Let the AI do what humans can't. Get intelligence that changes how you hire.</p>
-
-                <div class="steps-strip">
-                    <div class="step">
-                        <span class="step-number">01</span>
-                        <h3>Upload the Interview</h3>
-                        <p>Drop in any recorded interview. That's it. The moment it lands, our AI goes to work.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-number">02</span>
-                        <h3>AI Reads Between the Lines</h3>
-                        <p>Face, voice, and words — analyzed simultaneously. Confidence, doubt, stress, engagement — nothing hides from the signal.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-number">03</span>
-                        <h3>Decide with Clarity</h3>
-                        <p>A complete intelligence report. Strengths backed by moments. Concerns tied to evidence. A recommendation you can stand behind.</p>
-                    </div>
-                    <div class="steps-connector" aria-hidden="true"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Use Case -->
-        <section id="use-case" class="use-case">
-            <div class="section-container">
-                <div class="use-case-layout">
-                    <div class="use-case-content">
-                        <span class="eyebrow">Built for HR</span>
-                        <h2>We started with hiring.<br>Because hiring is broken.</h2>
-                        <p class="use-case-body">Every year, companies lose billions on bad hires made from gut feelings and forgotten impressions. We built AuraFusen to fix that — starting with the moment that matters most: the interview.</p>
-                        <div class="use-case-pills">
-                            <span class="pill">Emotion Scoring</span>
-                            <span class="pill">Bias Alerts</span>
-                            <span class="pill">Smart Q&A</span>
-                            <span class="pill">PDF Export</span>
-                            <span class="pill">Team Analytics</span>
-                        </div>
-                        <p class="use-case-roadmap">Next horizons: Education and Customer Experience — because emotional intelligence belongs everywhere.</p>
-                    </div>
-                    <div class="use-case-visual">
-                        <div class="use-case-mockup">
-                            <div class="ucm-card">
-                                <div class="ucm-avatar"></div>
-                                <div class="ucm-info">
-                                    <div class="ucm-name"></div>
-                                    <div class="ucm-role"></div>
-                                </div>
-                                <div class="ucm-score">
-                                    <svg width="36" height="36" viewBox="0 0 36 36">
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="75 25" stroke-linecap="round" transform="rotate(-90 18 18)"/>
-                                        <defs><linearGradient id="score-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="var(--primary)"/><stop offset="100%" stop-color="var(--secondary)"/></linearGradient></defs>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ucm-card">
-                                <div class="ucm-avatar"></div>
-                                <div class="ucm-info">
-                                    <div class="ucm-name"></div>
-                                    <div class="ucm-role"></div>
-                                </div>
-                                <div class="ucm-score">
-                                    <svg width="36" height="36" viewBox="0 0 36 36">
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="60 40" stroke-linecap="round" transform="rotate(-90 18 18)"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ucm-card">
-                                <div class="ucm-avatar"></div>
-                                <div class="ucm-info">
-                                    <div class="ucm-name"></div>
-                                    <div class="ucm-role"></div>
-                                </div>
-                                <div class="ucm-score">
-                                    <svg width="36" height="36" viewBox="0 0 36 36">
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
-                                        <circle cx="18" cy="18" r="15" fill="none" stroke="url(#score-gradient)" stroke-width="3" stroke-dasharray="85 15" stroke-linecap="round" transform="rotate(-90 18 18)"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Explore more CTA -->
+                <div class="features-more">
+                    <p class="features-more-text">Candidate comparison. Bias detection. Smart transcription. Enterprise security.</p>
+                    <a href="/product.html" class="features-more-link">
+                        Explore the full platform
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -449,7 +322,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <img src="images/logo-horizontal.png" alt="AuraFusen" class="logo-img">
+                        <span class="logo-aura">Aura</span>Fusen
                     </a>
                     <p class="footer-tagline">The AI that feels what interviews can't say.</p>
                     <p class="footer-location">Melbourne, Australia</p>
@@ -457,16 +330,14 @@
                 <div class="footer-links">
                     <div class="footer-col">
                         <h4>Product</h4>
-                        <a href="#features">Features</a>
-                        <a href="#product">Product</a>
-                        <a href="#how-it-works">How It Works</a>
-                        <a href="#pilot">Pilot Program</a>
+                        <a href="/product.html">Features</a>
+                        <a href="/product.html#how-it-works">How It Works</a>
+                        <a href="/pilot.html">Pilot Program</a>
                     </div>
                     <div class="footer-col">
                         <h4>Company</h4>
+                        <a href="/why.html">Why AuraFusen</a>
                         <a href="mailto:sales@neomeric.com">Contact</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
                     </div>
                     <div class="footer-col">
                         <h4>Connect</h4>

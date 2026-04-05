@@ -32,7 +32,7 @@ export default {
 
         try {
             const body = await request.json();
-            const { name, email, company, team_size } = body;
+            const { name, email, company, team_size, message } = body;
 
             // Validate required fields
             if (!email || !name || !company) {
@@ -73,7 +73,7 @@ export default {
             // 201 = created, 204 = updated (no body)
             if (brevoResponse.ok || brevoResponse.status === 204) {
                 // Also send a notification email via Brevo transactional
-                await sendNotificationEmail(env, { name, email, company, team_size });
+                await sendNotificationEmail(env, { name, email, company, team_size, message });
 
                 return jsonResponse({ success: true, message: 'Application received.' });
             }
@@ -100,7 +100,7 @@ export default {
 /**
  * Send a notification email to the AuraFusen team when someone applies
  */
-async function sendNotificationEmail(env, { name, email, company, team_size }) {
+async function sendNotificationEmail(env, { name, email, company, team_size, message }) {
     try {
         await fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
@@ -119,6 +119,7 @@ async function sendNotificationEmail(env, { name, email, company, team_size }) {
                     <p><strong>Email:</strong> ${email}</p>
                     <p><strong>Company:</strong> ${company}</p>
                     <p><strong>Team Size:</strong> ${team_size || 'Not specified'}</p>
+                    <p><strong>Message:</strong> ${message || 'Not provided'}</p>
                     <hr>
                     <p><em>Submitted via aurafusen.com</em></p>
                 `,

@@ -1,0 +1,584 @@
+/*
+Theme Name: AuraFusen
+Theme URI: https://www.aurafusen.com
+Description: AuraFusen blog theme — matches the main website design.
+Author: Neomeric Pty Ltd
+Author URI: https://www.neomeric.com
+Template: flavor
+Version: 1.0.0
+License: Proprietary
+Text Domain: aurafusen
+*/
+/* NOTE: The "Template" value above must exactly match the parent theme's
+   folder name in wp-content/themes/. If using GeneratePress, change to "generatepress".
+   If using flavor theme, keep as "flavor". */
+
+/* ============================================
+   AuraFusen Blog Design System
+   ============================================ */
+
+/* ---- Design Tokens (matching main site) ---- */
+:root {
+    /* Colors */
+    --primary: #6e00ff;
+    --primary-light: #8a33ff;
+    --secondary: #00c2ff;
+    --accent: #ff00c8;
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --text: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.65);
+
+    /* Light mode (blog content) */
+    --bg-light: #f8f7f5;
+    --surface-light: #ffffff;
+    --surface-light-elevated: #f0efed;
+    --text-dark: #1a1a1f;
+    --text-dark-secondary: #4a4a55;
+    --text-dark-muted: #5a5a65;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --shadow-light: 0 2px 16px rgba(0, 0, 0, 0.06);
+
+    /* Typography */
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    /* Layout */
+    --radius: 10px;
+    --radius-lg: 16px;
+    --max-width: 1200px;
+    --nav-height: 64px;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #6e00ff, #00c2ff);
+}
+
+/* ---- Global overrides ---- */
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---- Skip Navigation ---- */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 200;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+.skip-link:focus { top: 0.5rem; }
+
+/* ============================================
+   Navigation (matching main site)
+   ============================================ */
+
+.af-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-height);
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.af-nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.af-logo {
+    display: flex;
+    align-items: center;
+}
+
+.af-logo-img {
+    height: 96px;
+    width: auto;
+}
+
+.af-nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.af-nav-link {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.af-nav-link:hover {
+    color: #ffffff;
+}
+
+.af-nav-link.active {
+    color: #ffffff;
+    position: relative;
+}
+
+.af-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 1px;
+}
+
+.af-nav-actions {
+    display: flex;
+    align-items: center;
+}
+
+.af-btn-cta {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.af-btn-cta:hover {
+    box-shadow: 0 2px 12px rgba(110, 0, 255, 0.3);
+    transform: translateY(-1px);
+    color: white;
+}
+
+.af-mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+/* ============================================
+   Footer (matching main site)
+   ============================================ */
+
+.af-footer {
+    background: var(--bg);
+    color: var(--text);
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.af-footer-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.af-footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.af-footer-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+}
+
+.af-footer-tagline {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.875rem;
+}
+
+.af-footer-location {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+}
+
+.af-footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.af-footer-col h4 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.af-footer-col a {
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.af-footer-col a:hover {
+    color: #ffffff;
+}
+
+.af-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 1.5rem;
+}
+
+.af-footer-bottom p {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.8125rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* ============================================
+   Blog Layout
+   ============================================ */
+
+.blog-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-header h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.blog-header p {
+    color: var(--text-dark-secondary);
+    font-size: 1.125rem;
+}
+
+/* ---- Blog Card Grid ---- */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blog-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.blog-card:hover {
+    box-shadow: var(--shadow-light);
+    transform: translateY(-2px);
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card-content {
+    padding: 1.5rem;
+}
+
+.blog-card-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.blog-card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.blog-card-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-card-title a:hover {
+    color: var(--primary);
+}
+
+.blog-card-excerpt {
+    font-size: 0.9375rem;
+    color: var(--text-dark-secondary);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.blog-card-meta {
+    font-size: 0.8125rem;
+    color: var(--text-dark-muted);
+}
+
+/* ---- Blog Pagination ---- */
+.blog-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.blog-pagination a,
+.blog-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark-secondary);
+    border: 1px solid var(--border-light);
+    transition: all 0.2s;
+}
+
+.blog-pagination a:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.blog-pagination .current {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+}
+
+/* ============================================
+   Single Post
+   ============================================ */
+
+.single-post-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: calc(var(--nav-height) + 3rem) 2rem 4rem;
+}
+
+.single-post-content h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.single-post-meta {
+    font-size: 0.875rem;
+    color: var(--text-dark-muted);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.single-post-featured-image {
+    margin-bottom: 2rem;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.single-post-featured-image img {
+    width: 100%;
+    display: block;
+}
+
+/* ---- Article Content ---- */
+.entry-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-dark-secondary);
+}
+
+.entry-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 2.5rem 0 1rem;
+    letter-spacing: -0.01em;
+}
+
+.entry-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 2rem 0 0.75rem;
+}
+
+.entry-content p {
+    margin-bottom: 1.25rem;
+}
+
+.entry-content a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.entry-content a:hover {
+    color: var(--primary-light);
+}
+
+.entry-content img {
+    border-radius: var(--radius);
+    margin: 1.5rem 0;
+}
+
+.entry-content blockquote {
+    border-left: 3px solid var(--primary);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--text-dark-muted);
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin: 1rem 0 1.25rem 1.5rem;
+}
+
+.entry-content li {
+    margin-bottom: 0.5rem;
+}
+
+.entry-content code {
+    background: var(--surface-light-elevated);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.entry-content pre {
+    background: var(--bg);
+    color: var(--text);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.entry-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+/* ---- Post Navigation ---- */
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.post-navigation a {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+}
+
+.post-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Nav */
+    .af-nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 15, 0.98);
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .af-nav-links.open { display: flex; }
+    .af-mobile-menu-btn { display: block; }
+    .af-nav-actions { display: none; }
+
+    /* Blog grid */
+    .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .af-footer-content { flex-direction: column; }
+    .af-footer-links { flex-direction: column; gap: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .blog-container { padding-left: 1rem; padding-right: 1rem; }
+    .single-post-content { padding-left: 1rem; padding-right: 1rem; }
+}
