@@ -415,7 +415,15 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script src="https://cdn.neomeric.com/widget.js" data-tenant="haseeb-m-b2c281" data-agent="simon" async></script>
+    <script>
+        window.NeomindConfig = {
+            "apiUrl": "https://api.neomindhub.com",
+            "apiKey": "nm_0bffa4f1a41fb2420350f4c33785c43747ff528bc2508e710ace626eb7c00022",
+            "agent": "simon",
+            "siteName": "aurafusen.com"
+        };
+    </script>
+    <script src="https://api.neomindhub.com/static/widget.js" async></script>
 </body>
 
 </html>
